@@ -24,7 +24,7 @@ class SignUpController extends GetxController {
   String selectedGender;
   double latitude;
   double longitude;
-  bool showPassword = false;
+  bool showPassword = true;
   bool isLoading = false;
 
   @override

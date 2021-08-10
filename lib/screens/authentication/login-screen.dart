@@ -122,8 +122,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                 onTap: () => controller.showPassword(),
                                 splashColor: null,
                                 child: login.obscureText
-                                    ? Icon(Icons.visibility_off, color: Colors.grey[600])
-                                    : Icon(Icons.visibility, color: Colors.grey[600]),
+                                    ? Icon(Icons.visibility, color: Colors.grey[600])
+                                    : Icon(Icons.visibility_off, color: Colors.grey[600]),
                               ),
                               contentPadding: EdgeInsets.fromLTRB(block * 5, block * 2.5, block * 5, block * 2.5),
                               border: outlineBorder(radius: block * 2, color: transparent, width: 2),

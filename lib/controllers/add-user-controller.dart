@@ -28,7 +28,7 @@ class AddUserController extends GetxController {
   String selectedGender;
   double latitude;
   double longitude;
-  bool showPassword = false;
+  bool showPassword = true;
   bool isLoading = false;
 
   @override
@@ -61,8 +61,6 @@ class AddUserController extends GetxController {
       File selectedImageFile = File(pickedImage.path);
       File croppedImage = await imageService.cropImage(image: selectedImageFile);
       if (croppedImage != null) {
-        // final bytes = Io.File(croppedImage.path).readAsBytesSync();
-        // selectedImage = base64Encode(bytes);
         selectedImage = croppedImage;
         update();
       } else {
@@ -150,6 +148,8 @@ class AddUserController extends GetxController {
         } else {
           Get.rawSnackbar(message: jsonResponse['response']['message']);
         }
+        isLoading = false;
+        update();
       } else {
         isLoading = false;
         update();

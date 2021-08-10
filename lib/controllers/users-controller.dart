@@ -106,6 +106,7 @@ class UsersController extends GetxController {
   replaceUsers({List<User> users}) {
     userList = [];
     userList.addAll(users);
+    unfilteredUsers = userList;
     update();
   }
 }

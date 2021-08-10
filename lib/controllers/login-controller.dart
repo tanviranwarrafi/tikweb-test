@@ -15,7 +15,7 @@ class LoginController extends GetxController {
   GlobalKey<FormState> formKey = GlobalKey<FormState>(debugLabel: '_LoginFormState');
   TextEditingController email = TextEditingController();
   TextEditingController password = TextEditingController();
-  bool obscureText = false;
+  bool obscureText = true;
   bool isLoading = false;
 
   @override
